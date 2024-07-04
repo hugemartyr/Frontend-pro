@@ -1,0 +1,144 @@
+.top__nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 30;
+	height: 10vh;
+	padding: 0 2rem;
+
+	&.scrolled {
+		background-color: #2c2c2c;
+		box-shadow: 0 .7rem 1rem #1c1c1ca9;
+	}
+	// backdrop-filter: blur(10px);
+	// border-bottom: 1px solid #24242478;
+
+	.logo__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.3rem;
+		cursor: pointer;
+
+		img {
+			width: 2.3rem;
+			filter: invert(0.8);
+		}
+		p {
+			font-family: 'empire';
+			font-size: 1.4rem;
+			color: #d8d8d8;
+		}
+	}
+
+	.heading {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: 'empire';
+		color: white;
+		font-size: 1.7rem;
+
+		// background-color: #1f1f1faa;
+		padding: 0.5rem 0.9rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		
+
+		&::after {
+			content: '';
+			height: 0.2rem;
+			width: 0;
+			bottom: .1rem;
+			left: 50%;
+			z-index: -2;
+			background-color: #e3e3e3e2;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			transition: width .4s ease;
+		}
+
+		&:hover {
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+
+	& > div {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+		align-items: center;
+
+		& > div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.3rem;
+
+			img {
+				width: 1.2rem;
+				filter: invert(1) brightness(200);
+			}
+		}
+
+		.user {
+			$size: 2.3rem;
+			width: $size;
+			height: $size;
+			border-radius: 50%;
+			backdrop-filter: blur(10px);
+			background-color: #ffffff4a;
+			position: relative;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #ffffff6b;
+			}
+		}
+
+		.cart {
+			backdrop-filter: blur(10px);
+			background-color: #ffffff4a;
+			padding: 0.6rem 1.3rem;
+			border-radius: 0.4rem;
+			cursor: pointer;
+
+
+			p {
+				font-family: 'krona';
+				color: white;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.top__nav {
+		padding: 0 1rem;
+
+		.heading {
+
+			display: none;
+		}
+
+		.logo__container {
+			img {
+				filter: invert(1) brightness(200);
+				// width: 1.7rem;
+			}
+			p{
+				color: white;
+				// font-size: 1.1rem;
+			}
+		}
+	}
+
+}

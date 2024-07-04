@@ -1,0 +1,60 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   img {
+      display: block;
+   }
+
+   button {
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+         opacity: .8;
+      }
+   }
+   &::-webkit-scrollbar {
+      width: 8px;
+      background-color: #00302d;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: #555;
+      // border-radius: 10px;
+   }
+
+   &::-webkit-scrollbar-thumb:hover {
+      background-color: #5c5c5c;
+   }
+
+   &::-webkit-scrollbar-track {
+      background-color: #3b3b3b;
+   }
+}
+
+body {
+   background-color: #1d2021;
+}
+
+@font-face {
+   font-family: "night";
+   src: url("/fonts/night.ttf");
+}
+
+@font-face {
+   font-family: "empire";
+   src: url("/fonts/empire.otf");
+}
+
+@font-face {
+   font-family: "krona";
+   src: url("/fonts/krona.ttf");
+}
+
+@font-face {
+   font-family: "berani";
+   src: url("/fonts/Berani.otf");
+}
